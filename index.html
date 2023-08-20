@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Event ODD Finder App</title>
+</head>
+
+<style>
+    *{font-size:40px ; font-family:camria;}
+     body{background-color : lightblue;}
+    .nav {background-color: black; }
+    .nav a{color: white; text-decoration:none; padding:10%;}
+</style>
+
+<script>
+   function check()
+{
+event.preventDefault();
+  let num = document.getElementById("num");
+  let ans = document.getElementById("ans");
+
+if(num.value == "")
+{
+alert("you did not enter nay integer");
+ans.innerHTML = "";
+num.focus();
+return;
+}
+let r = parseInt(num.value);
+let d = r % 2 == 0 ? "even" : "odd" ;
+ans.innerHTML = d;
+}
+
+</script>
+
+<body>
+<center>
+
+<div class= "nav" >
+<a href="index.html"> Home </a>
+<a href="about.html"> About </a>
+ </div>
+
+<h1> Event Odd Finder </h1>
+
+
+<form onsubmit="check()">
+
+<input type= "text" id = "num" placeholder = " enter your Integer" />
+<br></br>
+<input type ="submit" value="Find E/O" />
+  
+
+<form>
+<h1 id="ans" />
+</center>
+
+</body>
+
+</html>
